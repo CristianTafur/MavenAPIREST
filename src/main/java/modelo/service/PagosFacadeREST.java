@@ -28,7 +28,7 @@ import modelo.Pagos;
 @Path("modelo.pagos")
 public class PagosFacadeREST extends AbstractFacade<Pagos> {
 
-    @PersistenceContext(unitName = "com.mycompany_mavenAPIREST_war_1.0-SNAPSHOTPU")
+    @PersistenceContext(unitName = "com.mycompany_MavenRESTAPI_war_1.0-SNAPSHOTPU")
     private EntityManager em;
 
     public PagosFacadeREST() {
