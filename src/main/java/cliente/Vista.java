@@ -135,7 +135,7 @@ public class Vista extends javax.swing.JFrame {
             usuario.setPass(documento.getText());
             usuario.setNombre(name.getText());
             if (!usuario.getDocumento().isEmpty()) { 
-            cliente.path("http://localhost:8080/APIREST/webresources/modelo.usuario/usuario");
+            cliente.path("http://localhost:8080/MavenRESTAPI/webresources/modelo.usuario/usuario");
             if(cliente.post(usuario))
                 Logica.imprimir("usuario "+documento.getText()+" a sido insertado");
             else
@@ -148,7 +148,7 @@ public class Vista extends javax.swing.JFrame {
             Usuario usuario;
             usuario=cliente.get(documento.getText());
             if(usuario!=null)
-                Logica.imprimir("     registrar\n"
+                Logica.imprimir("     buscar\n"
                               + "usuario : "+usuario.getNombre()+"\n"
                               + "documento : "+usuario.getDocumento()+"\n"
                               + "rol : "+usuario.getRol());

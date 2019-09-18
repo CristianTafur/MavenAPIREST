@@ -36,11 +36,11 @@ public class Cliente {
              
         }
        return false;
-    }
+    }//mavenAPIREST webresources modelo.usuario
     public Usuario get(String id){
         path("http://localhost:8080/MavenRESTAPI/webresources/modelo.usuario/usuario/"+id);
-        ClientResponse response=resource.type("application/json").get(ClientResponse.class);
-        try {
+       
+        try { ClientResponse response=resource.type("application/json").get(ClientResponse.class);
            return response.getEntity(Usuario.class);
         } catch (Exception e) {
         }
